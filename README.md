@@ -89,3 +89,104 @@ Ele será importante somente para as configurações do Android e Emulador.
 https://developer.android.com/studio/#downloads
 
 ## Definir path do SDK
+
+Abra o Android Studio e vá até as configurações
+
+![Android Studio](./android-studio-home.png)
+
+Copie o caminho do SDK:
+
+![SDK path](./android-studio-home-skd-copy-path.png)
+
+Adicione nas variáveis de ambiente como `ANDROID_HOME`:
+
+![SDK path](./Android-home.png)
+
+Adicione `%ANDROID_HOME%\platform-tools`, `%ANDROID_HOME%\tools` e `%ANDROID_HOME%\emulator` ao Path.
+
+ATENÇÂO, na imagem abaixo está faltando o `emulator`, mas ele também é importante.
+
+![SDK path](./path-var.png)
+
+Reinicie o computador.
+
+## Instale a versão 9.0 da plataforma Android
+
+Vá até p SDK Manager:
+
+![SDK path](./android-studio-home-skd.png)
+
+Selecione a versão 9.0 e instale.
+
+![SDK path](./skd9.png)
+
+# Crie um AVD
+
+Abra do Gerenciador de Dispositivos Virtuais:
+
+![SDK path](./select-avd-manager.png)
+
+Na tela qeu se abrirá, clique no botão 'create virtual device':
+
+![](./welcome-avd.png)
+
+Escolha uma configuração de aparelho de sua preferência:
+
+![](./choise-device-config.png)
+
+Clique em next e escolha um imagem para ser instalada no AVD.
+
+![](./select-sdk-avd.png)
+
+Faça o download da imagem e instale.
+Após a instalação, selectione a imagem e clique em 'Next'.
+
+![](./select-image-avd.png)
+
+Dê um nome simples para o seu AVD, vamos precisar do nome para executar futuramente:
+
+![](./avd-name.png)
+
+Clique em 'Finish' e feche o Android Studio.
+
+## Criando o primeiro projeto em React Native
+
+Abra um prompt de comando e execute um emulador:
+
+```
+%ANDROID_HOME%/emulator/emulator -avd <nome do avd que criou>
+```
+
+Abra outro prompt de comando e navegue até o diretóro onde seu projeto irá ficar:
+
+Digite:
+
+```
+react-native init MyFirstApp
+```
+
+O processo de criação pode demorar alguns minutos, então aguarde.
+
+Entre na pasta do projeto.
+
+```
+cd MyFirstApp
+```
+
+execute o comando abaixo para executar o serviço de desenvolvimento do React Native.
+
+```
+react-native start
+```
+
+Deixe executando, abra mais um prompt de comando e navegue até o diretório onde criou o projeto e execute:
+
+```
+react-native run-android
+```
+
+Esse comando pode demorar até 10 minutos na primeira vez, mas daqui pra frente o desenvolvimento será bem mais rápido.
+
+Espero vocês na primeira turma do GoMob!
+
+Eduardo Sutil
